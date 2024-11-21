@@ -27,6 +27,7 @@ int main() {
     float area;
     double pib;
     int numero_ponto_turistico;
+    float densidade;
     
     // Cadastro da Carta com variavel Estado_A
     printf('Digite o nome do Estado: \n');
@@ -54,6 +55,16 @@ int main() {
     printf('Digite o número de pontos turísticos: \n');
     scanf("%f", &numero_ponto_turistico);
 
+    printf("Digite a população da cidade: \n");
+    scanf("%f", &populacao);
+
+    printf("Digite a área em Km²: \n");
+    scanf("%f", %area);
+
+    densidade = populacao * area;
+
+    printf("A Densidade Populacional é: %.1f", densidade);
+    
     //Mensagem ao cadastrar Carta
     printf('Carta Cadastrada com sucesso. \n');
 
@@ -151,7 +162,7 @@ int main() {
     printf('Pib: "%f"\n', pib);
     printf('Pontos Turísticos: "%d"\n', numero_ponto_turistico);
 
-    printf("Desafio Nível Novato Concluído\n");
+    
     
     return 0;
 }
