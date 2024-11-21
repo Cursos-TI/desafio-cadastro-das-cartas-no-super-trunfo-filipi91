@@ -151,5 +151,7 @@ int main() {
     printf('Pib: "%f"\n', pib);
     printf('Pontos Turísticos: "%d"\n', numero_ponto_turistico);
 
+    printf("Desafio Nível Novato Concluído\n");
+    
     return 0;
 }
