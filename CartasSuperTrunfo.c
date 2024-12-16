@@ -28,7 +28,7 @@ int main()
     float pib_per_capita_cidade02;
     float super_poder_cidade02;
 
-    // Cadastro das cartas Super Trunfo
+    // Cadastro da Primeira Carta
     printf("Digite o Estado: ");
     scanf("%s", &estado);
 
@@ -56,6 +56,7 @@ int main()
 
     super_poder = (float)(populacao + area + pib + pib_per_capita + densidade_populacional + numero_pontos_turisticos);
 
+    //Impressão da Primeira Carta
     printf("Estado: %s\n", estado);
     printf("Código Cidade: %s\n", codigo_cidade);
     printf("Nome da Cidade: %s\n", nome_cidade);
@@ -67,6 +68,7 @@ int main()
     printf("PIB per Capita: %.2f\n", pib_per_capita);
     printf("Super Poder: %.1f\n", super_poder);
 
+    // Cadastro da Segunda Carta
     printf("Digite o Estado: ");
     scanf("%s", &estado);
 
@@ -94,6 +96,7 @@ int main()
 
     super_poder = (float)populacao + area + pib + pib_per_capita + densidade_populacional + numero_pontos_turisticos;
 
+    //Impressão da Segunda Carta
     printf("Estado: %s\n", estado);
     printf("Código Cidade: %s\n", codigo_cidade);
     printf("Nome da Cidade: %s\n", nome_cidade);
@@ -105,6 +108,7 @@ int main()
     printf("PIB per Capita: %.2f\n", pib_per_capita);
     printf("Super Poder: %.1f\n", super_poder);
 
+    //Comparando as cartas e dando o resultado final
     printf("Resultado População é %d\n", populacao_cidade01 > populacao_cidade02);
     printf("Resultado Área é %.d\n", area_cidade01 > area_cidade02);
     printf("Resultado PIB é %.d\n", pib_cidade01 > pib_cidade02);
