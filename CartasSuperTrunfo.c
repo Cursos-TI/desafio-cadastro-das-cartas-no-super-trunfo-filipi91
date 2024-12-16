@@ -1,168 +1,117 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
-int main() {
-    // Declaração de variáveis com nome de Estados.
-    char Estado_A[40];
-    char Estado_B[40];
-    char Estado_C[40];
-    char Estado_D[40];
-    char Estado_E[40];
-    char Estado_F[40];
-    char Estado_G[40];
-    char Estado_H[40];
-
-    // Declaração de variáveis com nome de Cidades.
-    char cidade_01[35];
-    char cidade_02[35];
-    char cidade_03[35];
-    char cidade_04[35];
-    // Atribuindo variáveis para código da cidade, população, área, PIB, número de pontos turísticos.
-    int cod_cidade;
-    float populacao;
+int main()
+{
+    // Criando váriáveis para cartas
+    char estado[40];
+    char codigo_cidade[40];
+    char nome_cidade[40];
+    int populacao;
     float area;
-    double pib;
-    int numero_ponto_turistico;
-    float densidade;
-    
-    // Cadastro da Carta com variavel Estado_A
-    printf('Digite o nome do Estado: \n');
-    scanf('%s', &Estado_A);
+    float pib;
+    int numero_pontos_turisticos;
+    float densidade_populacional;
+    float pib_per_capita;
+    float super_poder;
+    int populacao_cidade01;
+    float area_cidade01;
+    float pib_cidade01;
+    int numero_pontos_turistiscos_cidade01;
+    float densidade_populacional_cidade01;
+    float pib_per_capita_cidade01;
+    float super_poder_cidade01;
+    int populacao_cidade02;
+    float area_cidade02;
+    float pib_cidade02;
+    int numero_pontos_turistiscos_cidade02;
+    float densidade_populacional_cidade02;
+    float pib_per_capita_cidade02;
+    float super_poder_cidade02;
 
-    //Mensagem exibida com sucesso
-    printf('Estado cadastrado com sucesso\n');
+    // Cadastro das cartas Super Trunfo
+    printf("Digite o Estado: ");
+    scanf("%s", &estado);
 
-    //Cadastrando primeira cidade estado_A
-    printf('Digite o nome da 1ª cidade do Estado de %a\n', Estado_A);
-    scanf('%s', &cidade_01);
+    printf("Digite o Código da Cidade 1: ");
+    scanf("%s", &codigo_cidade);
 
-    printf('Digite o código da cidade: \n');
-    scanf('%d', &cod_cidade);
+    printf("Digite o Nome da Cidade 1: ");
+    scanf("%s", &nome_cidade);
 
-    printf('Digite a população da cidade: \n');
-    scanf("%f", &populacao);
+    printf("Digite a População: ");
+    scanf("%d", &populacao);
 
-    printf('Digite o tamanho da área em Km²: \n');
+    printf("Digite a Área em Km²: ");
     scanf("%f", &area);
 
-    printf('Digite o PIB da cidade: \n');
+    printf("Digite o PIB: ");
     scanf("%f", &pib);
 
-    printf('Digite o número de pontos turísticos: \n');
-    scanf("%f", &numero_ponto_turistico);
+    printf("Digite o Número de Pontos Turísticos: ");
+    scanf("%d", &numero_pontos_turisticos);
 
-    printf("Digite a população da cidade: \n");
-    scanf("%f", &populacao);
+    densidade_populacional = (float)populacao / area;
 
-    printf("Digite a área em Km²: \n");
-    scanf("%f", %area);
+    pib_per_capita = (float)pib / populacao;
 
-    densidade = populacao * area;
+    super_poder = (float)(populacao + area + pib + pib_per_capita + densidade_populacional + numero_pontos_turisticos);
 
-    printf("A Densidade Populacional é: %.1f", densidade);
-    
-    //Mensagem ao cadastrar Carta
-    printf('Carta Cadastrada com sucesso. \n');
+    printf("Estado: %s\n", estado);
+    printf("Código Cidade: %s\n", codigo_cidade);
+    printf("Nome da Cidade: %s\n", nome_cidade);
+    printf("População: %d\n", populacao);
+    printf("Área em Km²: %.1f\n", area);
+    printf("PIB: %.1f\n", pib);
+    printf("Pontos Turísticos: %d\n", numero_pontos_turisticos);
+    printf("Densidade Populacional: %.2fpessoas/Km²\n", densidade_populacional);
+    printf("PIB per Capita: %.2f\n", pib_per_capita);
+    printf("Super Poder: %.1f\n", super_poder);
 
-    //Exibindo Dados das Cartas
-    printf('Cidade: "%s"\n', cidade_01);
-    printf('População: "%f"\n', populacao);
-    printf('Área em Km: "%f"\n', area);
-    printf('Pib: "%f"\n', pib);
-    printf('Pontos Turísticos: "%d"\n', numero_ponto_turistico);
+    printf("Digite o Estado: ");
+    scanf("%s", &estado);
 
-//Cadastrando segunda cidade estado_A
-    printf('Digite o nome da 2ª cidade do Estado de %a\n', Estado_A);
-    scanf('%s', &cidade_02);
+    printf("Digite o Código da Cidade 2: ");
+    scanf("%s", &codigo_cidade);
 
-    printf('Digite o código da cidade: \n');
-    scanf('%d', &cod_cidade);
+    printf("Digite o Nome da Cidade 2: ");
+    scanf("%s", &nome_cidade);
 
-    printf('Digite a população da cidade: \n');
-    scanf("%f", &populacao);
+    printf("Digite a População: ");
+    scanf("%d", &populacao);
 
-    printf('Digite o tamanho da área em Km²: \n');
+    printf("Digite a Área em Km²: ");
     scanf("%f", &area);
 
-    printf('Digite o PIB da cidade: \n');
+    printf("Digite o PIB: ");
     scanf("%f", &pib);
 
-    printf('Digite o número de pontos turísticos: \n');
-    scanf("%f", &numero_ponto_turistico);
+    printf("Digite o Número de Pontos Turísticos: ");
+    scanf("%d", &numero_pontos_turisticos);
 
-    //Mensagem ao cadastrar Carta
-    printf('Carta Cadastrada com sucesso. \n');
+    densidade_populacional = (float)populacao / area;
 
-    //Exibindo Dados das Cartas
-    printf('Cidade: "%s"\n', cidade_02);
-    printf('População: "%f"\n', populacao);
-    printf('Área em Km: "%f"\n', area);
-    printf('Pib: "%f"\n', pib);
-    printf('Pontos Turísticos: "%d"\n', numero_ponto_turistico);
+    pib_per_capita = (float)pib / populacao;
 
-//Cadastrando terceira cidade estado_A
-    printf('Digite o nome da 3ª cidade do Estado de %a\n', Estado_A);
-    scanf('%s', &cidade_03);
+    super_poder = (float)populacao + area + pib + pib_per_capita + densidade_populacional + numero_pontos_turisticos;
 
-    printf('Digite o código da cidade: \n');
-    scanf('%d', &cod_cidade);
+    printf("Estado: %s\n", estado);
+    printf("Código Cidade: %s\n", codigo_cidade);
+    printf("Nome da Cidade: %s\n", nome_cidade);
+    printf("População: %d\n", populacao);
+    printf("Área em Km²: %.1f\n", area);
+    printf("PIB: %.1f\n", pib);
+    printf("Pontos Turísticos: %d\n", numero_pontos_turisticos);
+    printf("Densidade Populacional: %.2fpessoas/Km²\n", densidade_populacional);
+    printf("PIB per Capita: %.2f\n", pib_per_capita);
+    printf("Super Poder: %.1f\n", super_poder);
 
-    printf('Digite a população da cidade: \n');
-    scanf("%f", &populacao);
+    printf("Resultado População é %d\n", populacao_cidade01 > populacao_cidade02);
+    printf("Resultado Área é %.d\n", area_cidade01 > area_cidade02);
+    printf("Resultado PIB é %.d\n", pib_cidade01 > pib_cidade02);
+    printf("Resultado Pontos Turísticos é %d\n", numero_pontos_turistiscos_cidade01 > numero_pontos_turistiscos_cidade02);
+    printf("Resultado Densidade Populacional é %d\n", densidade_populacional_cidade01 < densidade_populacional_cidade02);
+    printf("Resultado PIB Per Capita é %d\n", pib_per_capita_cidade01 > pib_per_capita_cidade02);
+    printf("Resultado Super Poder é %.1f\n", super_poder_cidade01 > super_poder_cidade02);
 
-    printf('Digite o tamanho da área em Km²: \n');
-    scanf("%f", &area);
-
-    printf('Digite o PIB da cidade: \n');
-    scanf("%f", &pib);
-
-    printf('Digite o número de pontos turísticos: \n');
-    scanf("%f", &numero_ponto_turistico);
-
-    //Mensagem ao cadastrar Carta
-    printf('Carta Cadastrada com sucesso. \n');
-
-    //Exibindo Dados das Cartas
-    printf('Cidade: "%s"\n', cidade_03);
-    printf('População: "%f"\n', populacao);
-    printf('Área em Km: "%f"\n', area);
-    printf('Pib: "%f"\n', pib);
-    printf('Pontos Turísticos: "%d"\n', numero_ponto_turistico);
-
-    //Cadastrando quarta cidade estado_A
-    printf('Digite o nome da 4ª cidade do Estado de %a\n', Estado_A);
-    scanf('%s', &cidade_04);
-
-    printf('Digite o código da cidade: \n');
-    scanf('%d', &cod_cidade);
-
-    printf('Digite a população da cidade: \n');
-    scanf("%f", &populacao);
-
-    printf('Digite o tamanho da área em Km²: \n');
-    scanf("%f", &area);
-
-    printf('Digite o PIB da cidade: \n');
-    scanf("%f", &pib);
-
-    printf('Digite o número de pontos turísticos: \n');
-    scanf("%f", &numero_ponto_turistico);
-
-    //Mensagem ao cadastrar Carta
-    printf('Carta Cadastrada com sucesso. \n');
-
-    //Exibindo Dados das Cartas
-    printf('Cidade: "%s"\n', cidade_04);
-    printf('População: "%f"\n', populacao);
-    printf('Área em Km: "%f"\n', area);
-    printf('Pib: "%f"\n', pib);
-    printf('Pontos Turísticos: "%d"\n', numero_ponto_turistico);
-
-    
-    
     return 0;
 }
